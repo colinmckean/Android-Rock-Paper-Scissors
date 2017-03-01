@@ -10,9 +10,7 @@ public class AI {
 
     public Choice getChoice() {
         Random rand = new Random();
-        int Low = 0;
-        int High = 2;
-        int choise = rand.nextInt(High-Low) + Low;
-        return Choice.values()[choise];
+        int choice = rand.nextInt(3);
+        return Choice.values()[choice];
     }
 }
