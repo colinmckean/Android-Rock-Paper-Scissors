@@ -50,7 +50,7 @@ public class PlayGameActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra("result", result);
         intent.putExtra("playerChoice", playerChoice.toString());
-        intent.putExtra("ComputerChoice", computerChoice.toString());
+        intent.putExtra("computerChoice", computerChoice.toString());
         startActivity(intent);
 
     }
