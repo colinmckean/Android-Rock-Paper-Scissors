@@ -7,10 +7,12 @@ import java.util.Random;
  */
 
 public class AI {
+    Choice computerMove;
 
     public Choice getChoice() {
         Random rand = new Random();
         int choice = rand.nextInt(3);
-        return Choice.values()[choice];
+        computerMove = Choice.values()[choice];
+        return computerMove;
     }
 }
