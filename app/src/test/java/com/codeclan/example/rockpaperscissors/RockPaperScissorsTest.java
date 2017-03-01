@@ -23,7 +23,7 @@ public class RockPaperScissorsTest {
         spyComputer = Mockito.spy(computer);
         game = new Game();
         player = new Player();
-        spyPlayer = new Player();
+        spyPlayer = Mockito.spy(player);
 
     }
     @Test
@@ -35,19 +35,19 @@ public class RockPaperScissorsTest {
     public void testGetResultsWithPaper(){
         Mockito.when(spyComputer.getChoice()).thenReturn(Choice.PAPER);
         Mockito.when(spyPlayer.getChoice()).thenReturn(Choice.ROCK);
-        assertEquals("Computer wins.",game.getResults(player.getChoice(),spyComputer.getChoice()));
+        assertEquals("Computer wins.",game.getResults(spyPlayer.getChoice(),spyComputer.getChoice()));
     }
 
     @Test
     public void testGetResultsRock(){
         Mockito.when(spyComputer.getChoice()).thenReturn(Choice.ROCK);
         Mockito.when(spyPlayer.getChoice()).thenReturn(Choice.ROCK);
-        assertEquals("It's a draw.",game.getResults(player.getChoice(),spyComputer.getChoice()));
+        assertEquals("It's a draw.",game.getResults(spyPlayer.getChoice(),spyComputer.getChoice()));
     }
     @Test
     public void testGetResultsScissors(){
         Mockito.when(spyComputer.getChoice()).thenReturn(Choice.SCISSORS);
         Mockito.when(spyPlayer.getChoice()).thenReturn(Choice.ROCK);
-        assertEquals("Player 1 wins.",game.getResults(player.getChoice(),spyComputer.getChoice()));
+        assertEquals("Player 1 wins.",game.getResults(spyPlayer.getChoice(),spyComputer.getChoice()));
     }
 }
