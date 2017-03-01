@@ -11,7 +11,22 @@
     tools:context="com.codeclan.example.rockpaperscissors.ResultActivity"
     android:orientation="vertical">
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/result_heading"/>
+    <TextView
         android:id="@+id/game_Rslt_TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/player_choice_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/player_choice"
+        />
+    <TextView
+        android:id="@+id/computer_choice_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/computer_choice"/>
 </LinearLayout>
