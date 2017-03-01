@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_play_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.codeclan.example.rockpaperscissors.PlayGameActivity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/play_game_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/play_game_heading"
+        />
+    <Button
+        android:id="@+id/rock_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rock"
+        android:onClick="choiceButtonPressed"/>
+    <Button
+        android:id="@+id/paper_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/paper"
+        android:onClick="choiceButtonPressed"/>
+    <Button
+        android:id="@+id/scissors_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scissors"
+        android:onClick="choiceButtonPressed"/>
+
+</LinearLayout>
