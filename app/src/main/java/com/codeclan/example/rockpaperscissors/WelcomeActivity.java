@@ -16,7 +16,8 @@ public class WelcomeActivity extends AppCompatActivity {
         playGameBtn = (Button) findViewById(R.id.play_game_Btn);
 
     }
-    public void onClickToGoToGameActivity(View view){
+
+    public void onClickToGoToGameActivity(View view) {
         Intent intent = new Intent(this, PlayGameActivity.class);
         startActivity(intent);
     }

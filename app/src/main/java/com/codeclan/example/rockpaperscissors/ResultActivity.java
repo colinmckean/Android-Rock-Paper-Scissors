@@ -9,6 +9,7 @@ public class ResultActivity extends AppCompatActivity {
     TextView results;
     TextView playerChoiceTextView;
     TextView computerChoiceTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
