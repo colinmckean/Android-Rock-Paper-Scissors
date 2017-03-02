@@ -15,10 +15,4 @@ public class Game {
             return "Computer wins.";
         }
     }
-
-//
-//    (@player_1 == "rock" && @player_2 == "scissors") ||
-// (@player_1 == "scissors" && @player_2 == "paper") ||
-// (@player_1 == "paper" && @player_2 == "rock")
-//            "Player 1 wins with #{@player_1}"
 }

@@ -3,7 +3,6 @@ package com.codeclan.example.rockpaperscissors;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -12,7 +11,6 @@ public class PlayGameActivity extends AppCompatActivity {
     Button paperButton;
     Button scissors;
     Choice choice;
-    Choice computerChoice;
     AI computer;
     Game game;
 
@@ -32,27 +30,26 @@ public class PlayGameActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.rock_Btn:
                 choice = Choice.ROCK;
-                doTheTing(choice);
+                goToResults(choice);
                 break;
             case R.id.paper_Btn:
                 choice = Choice.PAPER;
-                doTheTing(choice);
+                goToResults(choice);
                 break;
             case R.id.scissors_Btn:
                 choice = Choice.SCISSORS;
-                doTheTing(choice);
+                goToResults(choice);
                 break;
         }
     }
-    public void doTheTing(Choice playerChoice){
-  Choice computerChoice = computer.getChoice();
+
+    public void goToResults(Choice playerChoice) {
+        Choice computerChoice = computer.getChoice();
         String result = game.getResults(playerChoice, computerChoice);
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra("result", result);
         intent.putExtra("playerChoice", playerChoice.toString());
         intent.putExtra("computerChoice", computerChoice.toString());
         startActivity(intent);
-
     }
-
 }
